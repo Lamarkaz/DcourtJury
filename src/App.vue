@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Layout></Layout>
+    <Metamask></Metamask>
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
+import Layout from '@/components/Layout.vue'
+import Metamask from '@/components/Metamask.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { Layout, Metamask }
+
 }
 </script>
 

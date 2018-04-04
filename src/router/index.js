@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Router from 'vue-router'
-import Dashboard from '@/components/Dashboard'
+import '../../node_modules/vuetify/dist/vuetify.min.css'
+import Layout from '@/components/Layout'
 
 
 import 'vuetify/dist/vuetify.min.css'
@@ -13,8 +14,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Dashboard',
-      component: Dashboard
+      name: 'Layout',
+      component: Layout
     }
   ]
 })
