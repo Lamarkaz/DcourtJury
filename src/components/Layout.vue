@@ -36,9 +36,20 @@
               <v-list-tile-title class="addressHolder">0x9AaFA5638415c7B5ca3e36c8888a040672eF2EE9</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
+          <v-divider></v-divider>
+          <v-list-tile v-for="item in items" :key="item.title" @click="">
+            <v-list-tile-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
         </v-list>
       </v-toolbar>
       <v-divider></v-divider>
+      <div class="SidebarItem">
+      </div>
     </v-navigation-drawer>
     </div>
   </div>
@@ -51,9 +62,10 @@ export default {
       return {
         drawer: true,
         items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
-        ],
+          { title: 'Dashboard', icon: 'dashboard' },
+          { title: 'Cases Viewer', icon: 'gavel' },
+          { title: 'Client Contracts', icon: 'layers' }
+          ],
         mini: true,
         right: true
       }
@@ -104,12 +116,21 @@ export default {
     margin-right: auto !important;
     margin-left: auto !important;
   }
-    .addressHolder {
+  .addressHolder {
     padding-right: 10px;
     text-overflow: ellipsis;
     overflow: hidden; 
     width: 160px; 
     height: 1.2em; 
     white-space: nowrap;
+  }
+  .SidebarItem {
+    margin-top: 160px;
+    height: 50%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
   }
 </style>
