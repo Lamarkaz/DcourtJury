@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Layout></Layout>
-    <Metamask></Metamask>
+    <Latest></Latest>
     <!-- <router-view/> -->
   </div>
 </template>
@@ -9,9 +9,10 @@
 <script>
 import Layout from '@/components/Layout.vue'
 import Metamask from '@/components/Metamask.vue'
+import Latest from '@/components/Latest.vue'
 export default {
   name: 'App',
-  components: { Layout, Metamask }
+  components: { Layout,  Latest }
 
 }
 </script>
@@ -23,5 +24,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+body {
+  background-color: #EEEEEE;
 }
 </style>

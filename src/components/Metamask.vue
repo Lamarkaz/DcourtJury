@@ -8,7 +8,7 @@
         <v-card-title primary-title>
           <div class="headline mmask">METAMASK IS MISSING!</div>
         </v-card-title>
-        <div class="body">Decentube is an Etheruem dApp, this means it's running on the ethereum blockchain. In order to create a profile on decentube you must install <a href="https://metamask.io" style="color:#FF8300">Metamask</a> browser extension.
+        <div class="body">Dcourt Jury Interface is an Etheruem dApp, this means it's running on the ethereum blockchain. In order to be a juror install <a target="_blank" href="https://metamask.io" style="color:#FF8300">Metamask</a> browser extension.
         </div>
         <div class="what">What is MetaMask?</div>
         <div class="body">
@@ -40,7 +40,7 @@
     margin-left: auto;
     margin-right: auto;
     color: #FF8300;
-    margin-top: -80px;
+    margin-top: -50px;
   }
   .body {
     display: block !important;
@@ -54,7 +54,8 @@
     font-size: 18px;
     color: #FF8300;
     padding-left: 80px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-weight: 500;
   }
   .video_wrapper {
