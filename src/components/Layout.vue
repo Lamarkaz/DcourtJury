@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar absolute dark color="deep-purple darken-3" height="65">
+    <v-toolbar absolute dark flat color="deep-purple darken-3" height="65">
       <v-toolbar-title class="white--text" v-on:click="$router.push('/')">
         <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"></img>
       </v-toolbar-title>
@@ -12,7 +12,7 @@
       single-line 
       placeholder="Case ID"
       class="searchBar input-group--focused"></v-text-field>
-      <v-btn icon v-on:click="$router.push('/hottest')">
+      <v-btn icon v-on:click="$router.push('/Latest')">
         <v-icon>whatshot</v-icon>
       </v-btn>
       <v-btn icon @click.stop="notifDrawer = !notifDrawer">
@@ -31,9 +31,10 @@
         v-model="notifDrawer"
         dark
         absolute
-        right="true"
+        right
+        hide-overlay
+        width= 600
         style="margin-top: 65px; background-color: #333; padding-right: 5px; padding-left: 5px"
-        hide-overlay="true"
       >
         <v-list class="pa-1">
           <v-list-tile>
@@ -58,11 +59,14 @@
               <img src="../assets/Avatar.png">
             </v-list-tile-avatar>
             <v-list-tile-content>
-              <v-list-tile-title class="addressHolder">0x9AaFA5638415c7B5ca3e36c8888a040672eF2EE9</v-list-tile-title>
+               <v-tooltip bottom>
+                <v-list-tile-title class="addressHolder" slot="activator">0x9AaFA5638415c7B5ca3e36c8888a040672eF2EE9</v-list-tile-title>
+                <span>Copy this Address</span>
+              </v-tooltip>
             </v-list-tile-content>
           </v-list-tile>
           <v-divider></v-divider>
-          <v-list-tile @click="">
+          <v-list-tile @click="$router.push('/Dashboard')">
             <v-list-tile-action>
               <v-icon>dashboard</v-icon>
             </v-list-tile-action>
@@ -78,7 +82,7 @@
               <v-list-tile-title style="font-size: 14px">Cases Explorer</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-list-tile @click="">
+          <v-list-tile @click="$router.push('/Clients')">
             <v-list-tile-action>
               <v-icon>layers</v-icon>
             </v-list-tile-action>
@@ -104,11 +108,6 @@ export default {
         siderBarDrawer: true,
         notifDrawer: false,
         items: [
-          { title: 'New Evidence', case: 'Duber ride case #13', icon: 'track_changes' },
-          { title: 'New Verdict', case: 'Decentube video copyrights violation case #85', icon: 'gavel' },
-          { title: 'New Reward', case: 'Decentube video copyrights violation case #85', icon: 'attach_money' },
-          { title: 'New Unlock', case: 'Decentube video copyrights violation case #85', icon: 'lock_open' },
-          { title: 'New Vote', case: 'Dirbnb problem case #159', icon: 'trending_up' },
           { title: 'New Evidence', case: 'Duber ride case #13', icon: 'track_changes' },
           { title: 'New Verdict', case: 'Decentube video copyrights violation case #85', icon: 'gavel' },
           { title: 'New Reward', case: 'Decentube video copyrights violation case #85', icon: 'attach_money' },

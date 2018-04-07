@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <Layout></Layout>
-    <Latest></Latest>
-    <!-- <router-view/> -->
+    <v-content style="margin-left: 65px">
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </v-content>
   </div>
 </template>
 
 <script>
 import Layout from '@/components/Layout.vue'
-import Metamask from '@/components/Metamask.vue'
-import Latest from '@/components/Latest.vue'
 export default {
   name: 'App',
-  components: { Layout,  Latest }
+  components: { Layout }
 
 }
 </script>
