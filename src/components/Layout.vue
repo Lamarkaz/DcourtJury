@@ -76,7 +76,7 @@
           </v-list-tile>
           <v-list-tile @click="">
             <v-list-tile-action>
-              <v-icon>gavel</v-icon>
+              <v-icon>account_balance</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
               <v-list-tile-title style="font-size: 14px">Cases Explorer</v-list-tile-title>

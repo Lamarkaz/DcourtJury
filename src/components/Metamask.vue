@@ -53,7 +53,6 @@
   .what {
     font-size: 18px;
     color: #FF8300;
-    padding-left: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 500;

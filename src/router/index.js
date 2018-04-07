@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Router from 'vue-router'
+import Welcome from '@/components/Welcome'
 import Layout from '@/components/Layout'
 import Latest from '@/components/Latest'
 import Clients from '@/components/Clients'
@@ -15,6 +16,7 @@ Vue.use(Vuetify)
 
 
 //Global Components
+Vue.component('Welcome', Welcome);
 Vue.component('Layout', Layout);
 Vue.component('Latest', Latest);
 Vue.component('Clients', Clients);
@@ -27,7 +29,8 @@ export default new Router({
     {path: '/', component: Metamask},
     {path: '/Latest', component: Latest},
     {path: '/Clients', component: Clients},
-    {path: '/Dashboard', component: Dashboard}
+    {path: '/Dashboard', component: Dashboard},
+    {path: '/Welcome', component: Welcome}
   ]
 })
 
