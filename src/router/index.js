@@ -30,7 +30,8 @@ export default new Router({
     {path: '/Latest', component: Latest},
     {path: '/Clients', component: Clients},
     {path: '/Dashboard', component: Dashboard},
-    {path: '/Welcome', component: Welcome}
+    {path: '/Welcome', component: Welcome
+}
   ]
 })
 

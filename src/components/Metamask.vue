@@ -1,7 +1,7 @@
 <template>
   <v-container style="margin-top: 25px">
     <v-flex xs12>
-      <v-card color="white darken-2" class="black--text">
+      <v-card color="white darken-2" class="black--text" style="margin-left: auto; margin-right: auto; max-width: 700px">
         <center>
           <img src="https://nogo10.gitbooks.io/ether-camp-live-studio-primer/content/metamask.png" width="40%"></img>
         </center>

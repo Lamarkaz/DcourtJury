@@ -17,7 +17,7 @@
       </v-btn>
       <v-btn icon @click.stop="notifDrawer = !notifDrawer">
        <v-badge overlap>
-        <span slot="badge" class="badge-not">4</span>
+        <span slot="badge" class="badge-not"></span>
         <v-avatar>
           <v-icon color="white">notifications</v-icon>
         </v-avatar>
@@ -124,14 +124,13 @@ export default {
 <style v>
   .badge-not {
     top: 30px !important;
-    right: 10px !important;
+    right: 16px !important;
     background-color: #F44336;
     color: white;
-    width: 18px;
-    height: 18px;
-    font-size: 12px;
-    font-weight: 900;
+    width: 15px;
+    height: 15px;
     border-radius: 99px;
+    border: 3px solid #4527a0;
     position: absolute;
     padding: 1px;
   }

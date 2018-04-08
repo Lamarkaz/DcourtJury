@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Layout></Layout>
+    <Layout v-show="LayoutAppear"></Layout>
     <v-content style="margin-left: 65px">
       <transition name="fade">
         <router-view></router-view>
@@ -13,8 +13,12 @@
 import Layout from '@/components/Layout.vue'
 export default {
   name: 'App',
-  components: { Layout }
-
+  components: { Layout },
+  data: function(){
+    return {
+      LayoutAppear: true
+    }
+  }
 }
 </script>
 

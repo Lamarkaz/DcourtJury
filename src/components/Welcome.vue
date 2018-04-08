@@ -18,8 +18,6 @@
 	</div>
 </template>
 
-
-
 <style scoped>
 	.mainWrapper {
 		margin-top: 60px;
@@ -30,6 +28,7 @@
 		margin-right: auto;
 		border-radius: 4px;
 		border-top: 4px solid #5E35B1;
+		box-shadow: 0px 6px 30px #666666;
 	}
 	.welcomeText {
 		color: white;

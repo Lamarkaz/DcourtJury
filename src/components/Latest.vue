@@ -12,12 +12,12 @@
 		    <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
 		    <template slot="items" slot-scope="props">
 		      <td>{{ props.item.caseTitle }}</td>
-		      <td class="text-xs-right">{{ props.item.caseId }}</td>
-		      <td class="text-xs-right">{{ props.item.clientContract }}</td>
-		      <td class="text-xs-right">{{ props.item.caseVotes }}</td>
-		      <td class="text-xs-right">{{ props.item.caseWeight }}</td>
-		      <td class="text-xs-right">{{ props.item.caseDeadline }}</td>
-		      <td class="text-xs-right">{{ props.item.caseStatus }}</td>
+		      <td class="text-xs-center">{{ props.item.caseId }}</td>
+		      <td class="text-xs-center">{{ props.item.clientContract }}</td>
+		      <td class="text-xs-center">{{ props.item.caseVotes }}</td>
+		      <td class="text-xs-center">{{ props.item.caseWeight }}</td>
+		      <td class="text-xs-center">{{ props.item.caseDeadline }}</td>
+		      <td class="text-xs-center">{{ props.item.caseStatus }}</td>
 		    </template>
 		  </v-data-table>
 	  </v-container>
