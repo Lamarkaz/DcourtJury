@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<v-container style="margin-top: 80px">
-			<h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px">whatshot</v-icon>Latest Cases</h3>
+		<v-container style="margin-top: 80px; max-width: 1100px">
+			<h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px">account_balance</v-icon>Cases Explorer</h3>
 		  <v-data-table
 		  	hide-actions
 		    :headers="headers"
@@ -11,16 +11,16 @@
 		  >
 		    <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
 		    <template slot="items" slot-scope="props">
-		      <td>{{ props.item.caseTitle }}</td>
-		      <td class="text-xs-center">{{ props.item.caseId }}</td>
-		      <td class="text-xs-center">{{ props.item.clientContract }}</td>
-		      <td class="text-xs-center">{{ props.item.caseVotes }}</td>
-		      <td class="text-xs-center">{{ props.item.caseWeight }}</td>
-		      <td class="text-xs-center">{{ props.item.caseDeadline }}</td>
-		      <td class="text-xs-center">{{ props.item.caseStatus }}</td>
-		    </template>
-		  </v-data-table>
-	  </v-container>
+          <td>{{ props.item.caseTitle }}</td>
+          <td class="text-xs-center">{{ props.item.caseId }}</td>
+          <td class="text-xs-center">{{ props.item.clientContract }}</td>
+          <td class="text-xs-center">{{ props.item.caseOpenedDate }}</td>
+          <td class="text-xs-center">{{ props.item.caseClosedDate }}</td>
+          <td class="text-xs-center">{{ props.item.caseVotes }}</td>
+          <td class="text-xs-center">{{ props.item.caseStatus }}</td>
+        </template>
+      </v-data-table>
+    </v-container>
   </div>
 </template>
 
@@ -37,9 +37,9 @@
           },
           { text: 'Case ID', value: 'caseId', align: 'center', sortable: false },
           { text: 'Client Contract', value: 'clientContract', align: 'center', sortable: false },
+          { text: 'Date Opened', value: 'caseOpenedDate', align: 'center', sortable: false },
+          { text: 'Date Closed', value: 'caseClosedDate', align: 'center', sortable: false },
           { text: 'Votes', value: 'caseVotes', align: 'center', sortable: false },
-          { text: 'Weight', value: 'caseWeight', align: 'center', sortable: true },
-          { text: 'Next Phase', value: 'caseDeadline', align: 'center', sortable: false },
           { text: 'Status', value: 'caseStatus', align: 'center', sortable: true }
         ],
         items: [
@@ -47,28 +47,28 @@
             caseTitle: 'Duber ride',
             caseId: 13,
             clientContract: 'Duber',
+            caseOpenedDate: '17 Apr, 2017',
+            caseClosedDate: '21 Dec, 2017',
+            caseStatus: 'Closed',
             caseVotes: 11,
-            caseWeight: 17,
-            caseDeadline: '1 block',
-            caseStatus: 'Trial'
           },
           {
             caseTitle: 'Decentube video copyrights violation',
             caseId: 85,
-            clientContract: 'Decentube',
-            caseVotes: 24,
-            caseWeight: 10,
-            caseDeadline: '4 blocks',
-            caseStatus: 'Voting'
+            clientContract: 'Ducentube',
+            caseOpenedDate: '20 Apr, 2017',
+            caseClosedDate: '-',
+            caseStatus: 'Open',
+            caseVotes: 73,
           },
           {
             caseTitle: 'Dirbnb problem',
-            caseId: 159,
-            clientContract: 'Dirbnb',
-            caseVotes: 50,
-            caseWeight: 4.0,
-            caseDeadline: '3 blocks',
-            caseStatus: 'Trial'
+            caseId: 129,
+            clientContract: 'Duber',
+            caseOpenedDate: '17 Apr, 2017',
+            caseClosedDate: '-',
+            caseStatus: 'Open',
+            caseVotes: 118,
           }
         ]
       }

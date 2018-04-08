@@ -12,7 +12,7 @@
       single-line 
       placeholder="Case ID"
       class="searchBar input-group--focused"></v-text-field>
-      <v-btn icon v-on:click="$router.push('/Latest')">
+      <v-btn icon v-on:click="$router.push('/latest')">
         <v-icon>whatshot</v-icon>
       </v-btn>
       <v-btn icon @click.stop="notifDrawer = !notifDrawer">
@@ -66,7 +66,7 @@
             </v-list-tile-content>
           </v-list-tile>
           <v-divider></v-divider>
-          <v-list-tile @click="$router.push('/Dashboard')">
+          <v-list-tile @click="$router.push('/dashboard')">
             <v-list-tile-action>
               <v-icon>dashboard</v-icon>
             </v-list-tile-action>
@@ -74,7 +74,7 @@
               <v-list-tile-title style="font-size: 14px">Dashboard</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-list-tile @click="">
+          <v-list-tile @click="$router.push('/cases-explorer')">
             <v-list-tile-action>
               <v-icon>account_balance</v-icon>
             </v-list-tile-action>
@@ -82,7 +82,7 @@
               <v-list-tile-title style="font-size: 14px">Cases Explorer</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-list-tile @click="$router.push('/Clients')">
+          <v-list-tile @click="$router.push('/clients')">
             <v-list-tile-action>
               <v-icon>layers</v-icon>
             </v-list-tile-action>

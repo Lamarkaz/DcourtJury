@@ -6,6 +6,7 @@ import Layout from '@/components/Layout'
 import Latest from '@/components/Latest'
 import Clients from '@/components/Clients'
 import Dashboard from '@/components/Dashboard'
+import CasesExplorer from '@/components/CasesExplorer'
 import Metamask from '@/components/Metamask'
 
 
@@ -21,17 +22,18 @@ Vue.component('Layout', Layout);
 Vue.component('Latest', Latest);
 Vue.component('Clients', Clients);
 Vue.component('Dashboard', Dashboard);
+Vue.component('CasesExplorer', CasesExplorer);
 Vue.component('Metamask', Metamask);
 
 
 export default new Router({
   routes: [
     {path: '/', component: Metamask},
-    {path: '/Latest', component: Latest},
-    {path: '/Clients', component: Clients},
-    {path: '/Dashboard', component: Dashboard},
-    {path: '/Welcome', component: Welcome
-}
+    {path: '/latest', component: Latest},
+    {path: '/clients', component: Clients},
+    {path: '/dashboard', component: Dashboard},
+    {path: '/welcome', component: Welcome},
+    {path: '/cases-explorer', component: CasesExplorer}
   ]
 })
 
