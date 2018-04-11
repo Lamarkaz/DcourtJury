@@ -8,6 +8,7 @@ import Clients from '@/components/Clients'
 import Dashboard from '@/components/Dashboard'
 import CasesArchive from '@/components/CasesArchive'
 import Metamask from '@/components/Metamask'
+import ClientContract from '@/components/ClientContract'
 import Gravatar from 'vue-gravatar';
 
 import { default as Web3} from 'web3';
@@ -29,6 +30,7 @@ Vue.component('Dashboard', Dashboard);
 Vue.component('CasesArchive', CasesArchive);
 Vue.component('Metamask', Metamask);
 Vue.component('v-gravatar', Gravatar);
+Vue.component('ClientContract', ClientContract);
 
 
 export default new Router({
@@ -38,7 +40,8 @@ export default new Router({
     {path: '/clients', component: Clients},
     {path: '/dashboard', component: Dashboard},
     {path: '/welcome', component: Welcome},
-    {path: '/cases-archive', component: CasesArchive}
+    {path: '/cases-archive', component: CasesArchive},
+    {path: '/client-contract', component: ClientContract}
   ]
 })
 
