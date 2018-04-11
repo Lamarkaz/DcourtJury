@@ -2,7 +2,7 @@
   <div>
     <v-toolbar absolute dark flat color="deep-purple darken-3" height="65">
       <v-toolbar-title class="white--text" v-on:click="$router.push('/')">
-        <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"></img>
+        <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-text-field 
@@ -41,7 +41,7 @@
             <h3 style="margin-right: auto; margin-left: auto; margin-top: 20px"><v-icon style="margin-right: 4px; margin-top: -5px">notifications</v-icon>Notifications</h3>
           </v-list-tile>
           <div style="margin-top: 20px"></div>
-          <v-list-tile v-for="item in items" :key="item.title" @click="" style="border-radius: 99px">
+          <v-list-tile v-for="item in items" :key="item.title" style="border-radius: 99px">
             <v-list-tile-content>
               <v-list-tile-title><v-icon style="margin-right: 9px; margin-top: -5px; font-size: 17px">{{ item.icon }}</v-icon>{{ item.title }}<strong style="margin-left: 4px">{{ item.case }}</strong>
               </v-list-tile-title>
@@ -54,13 +54,13 @@
       <v-navigation-drawer dark absolute v-model="siderBarDrawer">
       <v-toolbar flat class="transparent">
         <v-list class="pa-0">
-          <v-list-tile avatar>
+          <v-list-tile avatar target="_blank" :href="jurorScan">
             <v-list-tile-avatar style="margin-left: -6px">
-              <img src="../assets/Avatar.png">
+              <v-gravatar :hash="jurorAddress"/>
             </v-list-tile-avatar>
             <v-list-tile-content>
                <v-tooltip bottom>
-                <v-list-tile-title class="addressHolder" slot="activator">0x9AaFA5638415c7B5ca3e36c8888a040672eF2EE9</v-list-tile-title>
+                <v-list-tile-title class="addressHolder" slot="activator">{{ jurorAddress }}</v-list-tile-title>
                 <span>Copy this Address</span>
               </v-tooltip>
             </v-list-tile-content>
@@ -74,12 +74,12 @@
               <v-list-tile-title style="font-size: 14px">Dashboard</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <v-list-tile @click="$router.push('/cases-explorer')">
+          <v-list-tile @click="$router.push('/cases-archive')">
             <v-list-tile-action>
               <v-icon>account_balance</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title style="font-size: 14px">Cases Explorer</v-list-tile-title>
+              <v-list-tile-title style="font-size: 14px">Cases Archive</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
           <v-list-tile @click="$router.push('/clients')">
@@ -114,10 +114,15 @@ export default {
           { title: 'New Unlock', case: 'Decentube video copyrights violation case #85', icon: 'lock_open' },
           { title: 'New Vote', case: 'Dirbnb problem case #159', icon: 'trending_up' }
           ],
-        mini: true
+        mini: true,
+        jurorAddress: web3.eth.defaultAccount,
+        jurorScan: 'https://etherscan.io/address/' + jurorAddress,
       }
     }
 }
+
+var jurorAddress = web3.eth.defaultAccount;
+var jurorScan = 'https://etherscan.io/address/' + jurorAddress;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

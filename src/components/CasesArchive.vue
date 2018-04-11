@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<v-container style="margin-top: 80px; max-width: 1100px">
-			<h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px">account_balance</v-icon>Cases Explorer</h3>
+			<h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px">account_balance</v-icon>Cases Archive</h3>
 		  <v-data-table
 		  	hide-actions
 		    :headers="headers"

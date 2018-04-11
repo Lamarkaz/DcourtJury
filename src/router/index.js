@@ -6,8 +6,12 @@ import Layout from '@/components/Layout'
 import Latest from '@/components/Latest'
 import Clients from '@/components/Clients'
 import Dashboard from '@/components/Dashboard'
-import CasesExplorer from '@/components/CasesExplorer'
+import CasesArchive from '@/components/CasesArchive'
 import Metamask from '@/components/Metamask'
+import Gravatar from 'vue-gravatar';
+
+import { default as Web3} from 'web3';
+
 
 
 import 'vuetify/dist/vuetify.min.css'
@@ -22,8 +26,9 @@ Vue.component('Layout', Layout);
 Vue.component('Latest', Latest);
 Vue.component('Clients', Clients);
 Vue.component('Dashboard', Dashboard);
-Vue.component('CasesExplorer', CasesExplorer);
+Vue.component('CasesArchive', CasesArchive);
 Vue.component('Metamask', Metamask);
+Vue.component('v-gravatar', Gravatar);
 
 
 export default new Router({
@@ -33,7 +38,7 @@ export default new Router({
     {path: '/clients', component: Clients},
     {path: '/dashboard', component: Dashboard},
     {path: '/welcome', component: Welcome},
-    {path: '/cases-explorer', component: CasesExplorer}
+    {path: '/cases-archive', component: CasesArchive}
   ]
 })
 
