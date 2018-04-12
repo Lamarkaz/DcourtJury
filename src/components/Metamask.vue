@@ -3,7 +3,7 @@
     <v-flex xs12>
       <v-card class="black--text MMCard">
         <center>
-          <img src="https://nogo10.gitbooks.io/ether-camp-live-studio-primer/content/metamask.png" width="40%"></img>
+          <img src="https://nogo10.gitbooks.io/ether-camp-live-studio-primer/content/metamask.png" width="40%"/>
         </center>
         <v-card-title primary-title>
           <div class="headline mmask">METAMASK IS MISSING!</div>
@@ -12,7 +12,7 @@
         </div>
         <div class="what">What is MetaMask?</div>
         <div class="body">
-        MetaMask is a bridge for your browser to be able to connect to the ethereum blockchain, it allows you to run Ethereum dApps like Decentube right in your browser without running a full Ethereum node.
+        MetaMask is a bridge for your browser to be able to connect to the ethereum blockchain, it allows you to run Ethereum dApps like Dcourt right in your browser without running a full Ethereum node.
         <br />
         <br />
         Notice that Metamask is only availabe as an extension for chrome, this means that if you're using Safari or Firefox you need to download Chrome browser first.

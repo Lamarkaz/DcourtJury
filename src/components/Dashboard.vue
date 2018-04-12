@@ -5,7 +5,9 @@
         <v-gravatar :hash="gravatarHash" class="vGravatar" size="100"/>
         <v-card-title primary-title>
           <div style="margin-right: auto; margin-left: auto">
-            <h3 class="headlineJuror">{{ jurorAddress }}</h3>
+            <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
+              <h3 class="headlineJuror">{{ jurorAddress }}</h3>
+            </a>
           </div>
         </v-card-title>
       </v-card>

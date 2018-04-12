@@ -56,7 +56,7 @@
         <v-list class="pa-0">
           <v-list-tile avatar target="_blank" :href="jurorScan">
             <v-list-tile-avatar style="margin-left: -6px">
-              <v-gravatar :hash="jurorAddress"/>
+              <v-gravatar :hash="gravatarHash"/>
             </v-list-tile-avatar>
             <v-list-tile-content>
                <v-tooltip bottom>
@@ -101,6 +101,7 @@
 </template>
 
 <script>
+import * as md5 from '../js/md5.min.js'
 export default {
   name: 'Dashboard',
    data () {
@@ -115,14 +116,16 @@ export default {
           { title: 'New Vote', case: 'Dirbnb problem case #159', icon: 'trending_up' }
           ],
         mini: true,
-        jurorAddress: web3.eth.defaultAccount,
-        jurorScan: 'https://etherscan.io/address/' + jurorAddress,
+        jurorAddress: '',
+        gravatarHash: ''
       }
+    },
+    created (){
+        this.jurorAddress =  web3.eth.defaultAccount;
+        this.gravatarHash = md5.md5(this.jurorAddress);
     }
-}
 
-var jurorAddress = web3.eth.defaultAccount;
-var jurorScan = 'https://etherscan.io/address/' + jurorAddress;
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
