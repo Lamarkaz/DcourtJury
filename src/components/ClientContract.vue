@@ -2,7 +2,7 @@
   <v-layout style="margin-top: 150px; margin-left: 65px">
     <v-flex xs12 sm10 offset-sm1>
       <v-card class="jurorCard">
-        <v-gravatar hash="f3ada405ce890b6f8204094deb12d8a8" class="vGravatar"/>
+        <v-gravatar :hash="gravatarhash" class="vGravatar"/>
         <v-card-title primary-title>
           <div style="margin-right: auto; margin-left: auto">
             <h3 class="headlineJuror" style="color: black; margin-bottom: 4px"><v-icon style="font-size: 21px; margin-right: 2px; margin-top: -4px; color: black">layers</v-icon>Decentube</h3>
@@ -39,12 +39,13 @@
 
 
 <script>
+import * as md5 from '../js/md5.min.js'
 export default {
    data () {
       return {
-        ClientAddress: '0x85be36FA32D11BA6070F60A0119F1Fc5b0d25D1D',
-        ClientScan: 'https://etherscan.io/address/' + ClientAddress,
-        GravatarHash: '',
+        ClientAddress: '',
+        ClientScan: '',
+        gravatarHash: '',
         headers: [
           {
             text: 'Case Title',
@@ -85,13 +86,14 @@ export default {
           }
         ]
       }
+    },
+    created (){
+        this.ClientAddress = '0x85be36FA32D11BA6070F60A0119F1Fc5b0d25D1D';
+        this.ClientScan =  'https://etherscan.io/address/' + this.ClientAddress;
+
+        this.gravatarhash = md5.md5(this.ClientAddress);
     }
 }
-
-var ClientAddress = '0x85be36FA32D11BA6070F60A0119F1Fc5b0d25D1D';
-var ClientScan = 'https://etherscan.io/address/' + ClientAddress;
-
-
 </script>
 
 

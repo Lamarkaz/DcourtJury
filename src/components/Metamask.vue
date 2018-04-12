@@ -1,7 +1,7 @@
 <template>
-  <v-container style="margin-top: 25px">
+  <v-container style="margin-top: 65px">
     <v-flex xs12>
-      <v-card color="white darken-2" class="black--text" style="margin-left: auto; margin-right: auto; max-width: 700px">
+      <v-card class="black--text MMCard">
         <center>
           <img src="https://nogo10.gitbooks.io/ether-camp-live-studio-primer/content/metamask.png" width="40%"></img>
         </center>
@@ -42,8 +42,17 @@
     color: #FF8300;
     margin-top: -50px;
   }
+  .black--text.MMCard.card {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    background-color: #222;
+    border-top: 4px solid #5E35B1;
+  }
   .body {
     display: block !important;
+    color: white;
     font-size: 15px;
     padding-left: 80px;
     padding-right: 80px;
@@ -66,8 +75,8 @@
   .mm-btn {
     display: block;
     position: relative;
-    width: 200px;
-    height: 60px;
+    width: 170px;
+    height: 50px;
     margin-top: 20px;
     background-color: #FF8300;
     color: white

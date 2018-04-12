@@ -2,7 +2,7 @@
   <v-layout style="margin-top: 150px; margin-left: 65px">
     <v-flex xs12 sm4 offset-sm8>
       <v-card class="jurorCard">
-        <v-gravatar :hash="jurorAddress" class="vGravatar" size="100"/>
+        <v-gravatar :hash="gravatarHash" class="vGravatar" size="100"/>
         <v-card-title primary-title>
           <div style="margin-right: auto; margin-left: auto">
             <h3 class="headlineJuror">{{ jurorAddress }}</h3>
@@ -16,17 +16,21 @@
 
 
 <script>
+import * as md5 from '../js/md5.min.js'
 export default {
    data () {
       return {
-        jurorAddress: web3.eth.defaultAccount,
-        jurorScan: 'https://etherscan.io/address/' + jurorAddress,
+        jurorAddress: '',
+        jurorScan: '',
+        gravatarHash: '',
       }
+    },
+    created (){
+        this.jurorAddress = web3.eth.defaultAccount;
+        this.jurorScan = 'https://etherscan.io/address/' + this.jurorAddress;
+        this.gravatarHash = md5.md5(this.jurorAddress);
     }
 }
-
-var jurorAddress = web3.eth.defaultAccount;
-var jurorScan = 'https://etherscan.io/address/' + jurorAddress;
 </script>
 
 
