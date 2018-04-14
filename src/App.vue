@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Metamask v-if="!Metamask"></Metamask>
-    <Welcome v-if="!Registered"></Welcome>
+    <Welcome v-if="!Registered && Metamask"></Welcome>
     <div v-if="Metamask && Registered">
       <Layout></Layout>
       <v-content style="margin-left: 65px">
