@@ -1,6 +1,6 @@
 <template>
 	<div>
-	<img src="../assets/LogoInv.svg" width="240px" style="margin-top: 140px"></img>
+	<img src="../assets/LogoInv.svg" width="240px" style="margin-top: 140px"/>
 	<div class="mainWrapper">
 		<h3 class="welcomeText">Almost Done, Just on more step to begin.</h3>
 		<h3 class="welcomeTextSec">Now you can register as a Juror or surf the Case Explorer</h3>
@@ -20,7 +20,7 @@
 
 <style scoped>
 	.mainWrapper {
-		margin-top: 60px;
+		margin-top: 50px;
 		width: 800px;
 		height: 450px;
 		background-color: #222;

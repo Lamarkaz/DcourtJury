@@ -1,36 +1,30 @@
 <template>
   <v-layout style="margin-top: 150px; margin-left: 65px">
-    <v-flex xs12 sm4 offset-sm8>
-      <v-card class="jurorCard">
-        <v-gravatar :hash="gravatarHash" class="vGravatar"/>
-        <v-card-title primary-title>
-          <div style="margin-right: auto; margin-left: auto">
-            <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
-              <h3 class="headlineJuror">{{ jurorAddress }}</h3>
-            </a>
-          </div>
-        </v-card-title>
-      </v-card>
-    </v-flex>
+    <div class="mainWrapper">
+      <v-gravatar :hash="gravatarHash" class="vGravatar"/>
+      <div style="margin-right: auto; margin-left: auto">
+        <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
+          <h3 class="headlineJuror">{{ $root.jurorAddress }}</h3>
+        </a>
+      </div>
+    </div>
   </v-layout>
 </template>
 
-
-
 <script>
-import * as md5 from '../js/md5.min.js'
 export default {
    data () {
       return {
-        jurorAddress: '',
-        jurorScan: '',
-        gravatarHash: '',
+
       }
     },
-    created (){
-        this.jurorAddress = web3.eth.defaultAccount;
-        this.jurorScan = 'https://etherscan.io/address/' + this.jurorAddress;
-        this.gravatarHash = md5.md5(this.jurorAddress);
+    computed: {
+        jurorScan: function(){
+          return 'https://etherscan.io/address/' + this.$root.jurorAddress
+        },
+        gravatarHash: function(){
+          return md5(this.$root.jurorAddress)
+        }
     }
 }
 </script>
@@ -50,4 +44,25 @@ export default {
   .jurorCard {
     box-shadow: none !important;
   }
+  .mainWrapper {
+		margin-top: 60px;
+		width: 800px;
+		height: 450px;
+		background-color: #222;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 4px;
+		border-top: 4px solid #5E35B1;
+		box-shadow: 0px 6px 30px #666666;
+	}
+	.welcomeText {
+		color: white;
+		margin-top: 45px;
+		font-size: 22px;
+	}
+	.welcomeTextSec {
+		color: rgba(255,255,255,0.3);
+		margin-top: 2px;
+		font-size: 14px;
+	}
 </style>

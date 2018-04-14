@@ -1,5 +1,6 @@
 <template>
-  <v-container style="margin-top: 65px">
+  <v-container style="margin-top: 15px">
+    <img src="../assets/LogoInv.svg" width="240px" style="margin-top: 40px; margin-bottom: 40px"/>
     <v-flex xs12>
       <v-card class="black--text MMCard">
         <center>

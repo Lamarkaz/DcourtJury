@@ -39,7 +39,6 @@
 
 
 <script>
-import * as md5 from '../js/md5.min.js'
 export default {
    data () {
       return {
@@ -91,7 +90,7 @@ export default {
         this.ClientAddress = '0x85be36FA32D11BA6070F60A0119F1Fc5b0d25D1D';
         this.ClientScan =  'https://etherscan.io/address/' + this.ClientAddress;
 
-        this.gravatarhash = md5.md5(this.ClientAddress);
+        this.gravatarhash = md5(this.ClientAddress);
     }
 }
 </script>

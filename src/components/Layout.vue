@@ -60,7 +60,7 @@
             </v-list-tile-avatar>
             <v-list-tile-content>
                <v-tooltip bottom>
-                <v-list-tile-title class="addressHolder" slot="activator">{{ jurorAddress }}</v-list-tile-title>
+                <v-list-tile-title class="addressHolder" slot="activator">{{ $root.jurorAddress }}</v-list-tile-title>
                 <span>Copy this Address</span>
               </v-tooltip>
             </v-list-tile-content>
@@ -101,7 +101,6 @@
 </template>
 
 <script>
-import * as md5 from '../js/md5.min.js'
 export default {
   name: 'Dashboard',
    data () {
@@ -116,13 +115,12 @@ export default {
           { title: 'New Vote', case: 'Dirbnb problem case #159', icon: 'trending_up' }
           ],
         mini: true,
-        jurorAddress: '',
-        gravatarHash: ''
       }
     },
-    created (){
-        this.jurorAddress = web3.eth.defaultAccount;
-        this.gravatarHash = md5.md5(this.jurorAddress);
+    computed: {
+        gravatarHash: function(){
+          return md5(this.$root.jurorAddress);
+        } 
     }
 }
 </script>

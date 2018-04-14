@@ -7,7 +7,6 @@ import Latest from '@/components/Latest'
 import Clients from '@/components/Clients'
 import Dashboard from '@/components/Dashboard'
 import CasesArchive from '@/components/CasesArchive'
-import Metamask from '@/components/Metamask'
 import ClientContract from '@/components/ClientContract'
 import Gravatar from 'vue-gravatar';
 
@@ -28,14 +27,13 @@ Vue.component('Latest', Latest);
 Vue.component('Clients', Clients);
 Vue.component('Dashboard', Dashboard);
 Vue.component('CasesArchive', CasesArchive);
-Vue.component('Metamask', Metamask);
 Vue.component('v-gravatar', Gravatar);
 Vue.component('ClientContract', ClientContract);
 
 
 export default new Router({
   routes: [
-    {path: '/', component: Metamask},
+    {path: '/', component: Dashboard},
     {path: '/latest', component: Latest},
     {path: '/clients', component: Clients},
     {path: '/dashboard', component: Dashboard},

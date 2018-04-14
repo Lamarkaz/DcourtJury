@@ -1,22 +1,31 @@
 <template>
   <div id="app">
-    <Layout v-show="LayoutAppear"></Layout>
-    <v-content style="margin-left: 65px">
-      <transition name="fade">
-        <router-view></router-view>
-      </transition>
-    </v-content>
+    <Metamask v-if="!Metamask"></Metamask>
+    <div v-if="Metamask">
+      <Layout></Layout>
+      <v-content style="margin-left: 65px">
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
+      </v-content>
+    </div>
   </div>
 </template>
 
 <script>
 import Layout from '@/components/Layout.vue'
+import Metamask from '@/components/Metamask.vue'
 export default {
   name: 'App',
-  components: { Layout },
-  data: function(){
+  components: { Layout, Metamask },
+  data (){
     return {
-      LayoutAppear: true
+      Metamask: false,
+    }
+  },
+  created (){
+    if(web3.currentProvider.isMetaMask){
+      this.Metamask = true;
     }
   }
 }
