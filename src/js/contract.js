@@ -1,4 +1,4 @@
-import config from "../../config.json";
+import config from "../../conf.json";
 import { default as Web3} from 'web3';
 
   // Checking if Web3 has been injected by the browser (Mist/MetaMask/Brave)

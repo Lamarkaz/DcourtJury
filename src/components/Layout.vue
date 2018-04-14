@@ -54,8 +54,8 @@
       <v-navigation-drawer dark absolute v-model="siderBarDrawer">
       <v-toolbar flat class="transparent">
         <v-list class="pa-0">
-          <v-list-tile avatar target="_blank" :href="jurorScan">
-            <v-list-tile-avatar style="margin-left: -6px">
+          <v-list-tile avatar>
+            <v-list-tile-avatar style="margin-left: -7px" class="gravatar">
               <v-gravatar :hash="gravatarHash"/>
             </v-list-tile-avatar>
             <v-list-tile-content>
@@ -121,10 +121,9 @@ export default {
       }
     },
     created (){
-        this.jurorAddress =  web3.eth.defaultAccount;
+        this.jurorAddress = web3.eth.defaultAccount;
         this.gravatarHash = md5.md5(this.jurorAddress);
     }
-
 }
 </script>
 
@@ -143,8 +142,14 @@ export default {
     padding: 1px;
   }
   .avatar .icon, .avatar img {
-    width: 25px;
-    height: 25px;
+    width: 100%;
+    height: 100%;
+  }
+  .list__tile.list__tile--avatar .avatar {
+    height: 30px !important;
+    width: 30px !important;
+    border: 2px solid white;
+    left: 6px;
   }
   .searchBar { 
     max-width: 120px;

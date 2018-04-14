@@ -2,7 +2,7 @@
   <v-layout style="margin-top: 150px; margin-left: 65px">
     <v-flex xs12 sm4 offset-sm8>
       <v-card class="jurorCard">
-        <v-gravatar :hash="gravatarHash" class="vGravatar" size="100"/>
+        <v-gravatar :hash="gravatarHash" class="vGravatar"/>
         <v-card-title primary-title>
           <div style="margin-right: auto; margin-left: auto">
             <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
