@@ -1,6 +1,6 @@
 <template>
 	<div>
-	<img src="../assets/LogoInv.svg" width="240px" style="margin-top: 140px"/>
+	<img src="../assets/LogoInv.svg" width="240px" style="margin-top: 100px"/>
 	<div class="mainWrapper">
 		<h3 class="welcomeText">Almost Done, Just on more step to begin.</h3>
 		<h3 class="welcomeTextSec">Now you can register as a Juror or surf the Case Explorer</h3>
