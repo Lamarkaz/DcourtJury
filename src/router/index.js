@@ -8,6 +8,7 @@ import Clients from '@/components/Clients'
 import Dashboard from '@/components/Dashboard'
 import CasesArchive from '@/components/CasesArchive'
 import ClientContract from '@/components/ClientContract'
+import Case from '@/components/Case'
 import Gravatar from 'vue-gravatar';
 
 import { default as Web3} from 'web3';
@@ -29,6 +30,7 @@ Vue.component('Dashboard', Dashboard);
 Vue.component('CasesArchive', CasesArchive);
 Vue.component('v-gravatar', Gravatar);
 Vue.component('ClientContract', ClientContract);
+Vue.component('Case', Case);
 
 
 export default new Router({
@@ -39,7 +41,8 @@ export default new Router({
     {path: '/dashboard', component: Dashboard},
     {path: '/welcome', component: Welcome},
     {path: '/cases-archive', component: CasesArchive},
-    {path: '/client-contract', component: ClientContract}
+    {path: '/client-contract', component: ClientContract},
+    {path: '/case', component: Case}
   ]
 })
 

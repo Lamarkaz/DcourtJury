@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar absolute dark flat color="deep-purple darken-3" height="65">
+    <v-toolbar fixed dark flat color="deep-purple darken-3" height="65">
       <v-toolbar-title class="white--text" v-on:click="$router.push('/')">
         <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"/>
       </v-toolbar-title>
@@ -154,8 +154,8 @@ export default {
     margin-right: 14px
   }
   .sideBar {
-    min-height:100%;
-    position: absolute;
+    height:100%;
+    position: fixed;
     top: 65px;
     background-color: #333;
     left: 0px;
