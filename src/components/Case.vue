@@ -14,24 +14,26 @@
                     [Claim of Ownership] I've the copyrights for this video!
                 </v-breadcrumbs-item>
             </v-breadcrumbs>
-            <v-chip color="grey darken-4" text-color="white" style="margin-top: -73px; margin-left: 50%">
-                <v-icon style="font-size: 16px; margin-right: 6px">account_balance</v-icon>
-                Case ID 14
-            </v-chip>
-            <v-chip color="grey darken-4" text-color="white" style="margin-top: -111px; margin-left: 71.3%">
-                <v-icon style="font-size: 16px; margin-right: 6px">gavel</v-icon>
-                183 Votes
-            </v-chip>
-            <v-chip color="grey darken-4" text-color="white" style="margin-top: -150px; margin-left: 90%">
-                <v-icon style="font-size: 16px; margin-right: 6px">timer</v-icon>
-                4 Days
-            </v-chip>
+            <div style="margin-top: -48px; margin-left: 67%;  margin-bottom: 20px">
+                <v-chip color="grey darken-4" text-color="white">
+                    <v-icon style="font-size: 16px; margin-right: 6px">account_balance</v-icon>
+                    Case ID 14
+                </v-chip>
+                <v-chip color="grey darken-4" text-color="white">
+                    <v-icon style="font-size: 16px; margin-right: 6px">gavel</v-icon>
+                    183 Votes
+                </v-chip>
+                <v-chip color="grey darken-4" text-color="white">
+                    <v-icon style="font-size: 16px; margin-right: 6px">timer</v-icon>
+                    4 Days
+                </v-chip>
+            </div>
 
             <div class="caseBody">
                 <div class="oppWrapper" style="border-right: 1px solid grey">
                     <v-gravatar :hash="gravatarHashAcc" class="vGravatar"/>
                     <div style="margin-right: auto; margin-left: auto">
-                        <v-chip label color="green" text-color="white" style="margin-top:15px">
+                        <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
                             Accuser
                         </v-chip>
                         <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
@@ -46,7 +48,7 @@
                 <div class="oppWrapper">
                     <v-gravatar :hash="gravatarHashDef" class="vGravatar"/>
                     <div style="margin-right: auto; margin-left: auto">
-                        <v-chip label color="red" text-color="white" style="margin-top:15px">
+                        <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
                             Defender
                         </v-chip>
                         <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
