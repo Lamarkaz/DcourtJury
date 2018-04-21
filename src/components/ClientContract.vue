@@ -12,25 +12,25 @@
           </div>
         </v-card-title>
         <v-container style="margin-top: 40px; max-width: 1100px">
-		  <h3 class="headerText"><v-icon style="margin-top: 6px; margin-right: 4px; margin-bottom: 10px">history</v-icon>Contract Cases History</h3>
-		  <v-data-table
-		  	hide-actions
-		    :headers="headers"
-		    :items="items"
-		    :loading="true"
-		    class="elevation-1"
-		  >
-		    <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
-		    <template slot="items" slot-scope="props">
-          <td>{{ props.item.caseTitle }}</td>
-          <td class="text-xs-center">{{ props.item.caseId }}</td>
-          <td class="text-xs-center">{{ props.item.caseOpenedDate }}</td>
-          <td class="text-xs-center">{{ props.item.caseClosedDate }}</td>
-          <td class="text-xs-center">{{ props.item.caseVotes }}</td>
-          <td class="text-xs-center">{{ props.item.caseStatus }}</td>
-        </template>
-      </v-data-table>
-    </v-container>
+    		  <h3 class="headerText"><v-icon style="margin-top: 6px; margin-right: 4px; margin-bottom: 10px">history</v-icon>Contract Cases History</h3>
+    		  <v-data-table
+    		  	hide-actions
+    		    :headers="headers"
+    		    :items="items"
+    		    :loading="true"
+    		    class="elevation-1"
+    		  >
+    		    <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
+    		    <template slot="items" slot-scope="props">
+              <td>{{ props.item.caseTitle }}</td>
+              <td class="text-xs-center">{{ props.item.caseId }}</td>
+              <td class="text-xs-center">{{ props.item.caseOpenedDate }}</td>
+              <td class="text-xs-center">{{ props.item.caseClosedDate }}</td>
+              <td class="text-xs-center">{{ props.item.caseVotes }}</td>
+              <td class="text-xs-center">{{ props.item.caseStatus }}</td>
+            </template>
+          </v-data-table>
+        </v-container>
       </v-card>
     </v-flex>
   </v-layout>
