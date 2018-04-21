@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar fixed dark flat color="deep-purple darken-3" height="65">
+    <v-toolbar fixed dark flat color="deep-purple darken-3" height="65" style="z-index: 1000">
       <v-toolbar-title class="white--text" v-on:click="$router.push('/')">
         <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"/>
       </v-toolbar-title>

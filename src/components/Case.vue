@@ -1,78 +1,97 @@
 <template>
-  <v-layout style="margin-top: 70px">
-    <div class="mainWrapper">
-        <div class="upperWrapper">
-            <v-breadcrumbs style="color: white; margin-left: 20px; margin-top: -56px">
-                <v-icon slot="divider">chevron_right</v-icon>
-                <v-breadcrumbs-item
-                >
-                    Decentube
-                </v-breadcrumbs-item>
-                <v-breadcrumbs-item
-                    disabled=disabled
-                >
-                    [Claim of Ownership] I've the copyrights for this video!
-                </v-breadcrumbs-item>
-            </v-breadcrumbs>
-            <div style="margin-top: -48px; margin-left: 67%;  margin-bottom: 20px">
-                <v-chip color="grey darken-4" text-color="white">
-                    <v-icon style="font-size: 16px; margin-right: 6px">account_balance</v-icon>
-                    Case ID 14
-                </v-chip>
-                <v-chip color="grey darken-4" text-color="white">
-                    <v-icon style="font-size: 16px; margin-right: 6px">gavel</v-icon>
-                    183 Votes
-                </v-chip>
-                <v-chip color="grey darken-4" text-color="white">
-                    <v-icon style="font-size: 16px; margin-right: 6px">timer</v-icon>
-                    4 Days
-                </v-chip>
+    <v-container>
+      <v-layout style="margin-top: 57px">
+        <div class="statusBar">
+            <div class="upperWrapper" style="z-index: 10">
+                <v-stepper value="2">
+                    <v-stepper-header>
+                      <v-stepper-step step="1" complete>Select campaign settings</v-stepper-step>
+                      <v-divider></v-divider>
+                      <v-stepper-step step="2">Create an ad group</v-stepper-step>
+                      <v-divider></v-divider>
+                      <v-stepper-step step="3">Create an ad</v-stepper-step>
+                      <v-divider></v-divider>
+                      <v-stepper-step step="3">Create an ad</v-stepper-step>
+                    </v-stepper-header>
+                  </v-stepper>
             </div>
+        </div>  
+     </v-layout>
+     <v-layout>
+        <div class="mainWrapper">
+            <div class="upperWrapper">
+                <v-breadcrumbs style="color: white; margin-left: 20px; margin-top: -56px">
+                    <v-icon slot="divider">chevron_right</v-icon>
+                    <v-breadcrumbs-item
+                    >
+                        Decentube
+                    </v-breadcrumbs-item>
+                    <v-breadcrumbs-item
+                        disabled=disabled
+                    >
+                        [Claim of Ownership] I've the copyrights for this video!
+                    </v-breadcrumbs-item>
+                </v-breadcrumbs>
+                <div style="margin-top: -48px; margin-left: 67%;  margin-bottom: 20px">
+                    <v-chip color="grey darken-4" text-color="white">
+                        <v-icon style="font-size: 16px; margin-right: 6px">account_balance</v-icon>
+                        Case ID 14
+                    </v-chip>
+                    <v-chip color="grey darken-4" text-color="white">
+                        <v-icon style="font-size: 16px; margin-right: 6px">gavel</v-icon>
+                        183 Votes
+                    </v-chip>
+                    <v-chip color="grey darken-4" text-color="white">
+                        <v-icon style="font-size: 16px; margin-right: 6px">timer</v-icon>
+                        4 Days
+                    </v-chip>
+                </div>
 
-            <div class="caseBody">
-                <div class="oppWrapper" style="border-right: 1px solid grey">
-                    <v-gravatar :hash="gravatarHashAcc" class="vGravatar"/>
-                    <div style="margin-right: auto; margin-left: auto">
-                        <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
-                            Accuser
-                        </v-chip>
-                        <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
-                        <h3 class="headlineJuror">0xFb386606BAd35e2432d3E0315cfbf79eCA60b018</h3>
-                        </a>
+                <div class="caseBody">
+                    <div class="oppWrapper" style="border-right: 1px solid grey">
+                        <v-gravatar :hash="gravatarHashAcc" class="vGravatar"/>
+                        <div style="margin-right: auto; margin-left: auto">
+                            <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
+                                Accuser
+                            </v-chip>
+                            <a target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
+                            <h3 class="headlineJuror">0xFb386606BAd35e2432d3E0315cfbf79eCA60b018</h3>
+                            </a>
+                        </div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
                     </div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                </div>
-                <div class="oppWrapper">
-                    <v-gravatar :hash="gravatarHashDef" class="vGravatar"/>
-                    <div style="margin-right: auto; margin-left: auto">
-                        <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
-                            Defender
-                        </v-chip>
-                        <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
-                        <h3 class="headlineJuror">0x6CaCE0528324A8afC2b157CebA3cDd2a27c4E21f</h3>
-                        </a>
+                    <div class="oppWrapper">
+                        <v-gravatar :hash="gravatarHashDef" class="vGravatar"/>
+                        <div style="margin-right: auto; margin-left: auto">
+                            <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
+                                Defender
+                            </v-chip>
+                            <a target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
+                            <h3 class="headlineJuror">0x6CaCE0528324A8afC2b157CebA3cDd2a27c4E21f</h3>
+                            </a>
+                        </div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
+                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
                     </div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                    <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
                 </div>
             </div>
+            <div class="askWrapper">
+                <v-icon class="askTitle">gavel</v-icon>
+                <v-card style="box-shadow: none">
+                    <v-card-text>
+                    <p class="text-xs-center askBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius.</p>
+                    </v-card-text>
+                </v-card>
+                <v-btn class="actionBtn" color="green" style="left: 0px">Not Guilty</v-btn>
+                <v-btn class="actionBtn" color="red" style="right: 0px">Guilty</v-btn>
+            </div>
         </div>
-        <div class="askWrapper">
-            <v-icon class="askTitle">gavel</v-icon>
-            <v-card style="box-shadow: none">
-                <v-card-text>
-                <p class="text-xs-center askBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius.</p>
-                </v-card-text>
-            </v-card>
-            <v-btn class="actionBtn" color="green" style="left: 0px">Not Guilty</v-btn>
-            <v-btn class="actionBtn" color="red" style="right: 0px">Guilty</v-btn>
-        </div>
-    </div>
-  </v-layout>
+      </v-layout>
+    </v-container>
 </template>
 
 <script>
@@ -118,17 +137,17 @@
     box-shadow: none !important;
   }
   .mainWrapper {
-		margin-top: 30px;
+        margin-top: 15px;
         padding-bottom: 350px;
         margin-bottom: 30px;
-		width: 1150px;
-		height: auto;
-		background-color: #222;
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 4px;
-		border-top: 60px solid #5E35B1;
-		box-shadow: 0px 6px 30px #666666;
+        width: 1150px;
+        height: auto;
+        background-color: #222;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 4px;
+        border-top: 60px solid #5E35B1;
+        box-shadow: 0px 6px 30px #666666;
     }
     .caseDivider {
         border-color: rgba(255,255,255,0.2);
@@ -190,6 +209,7 @@
     .headlineJuror {
         color: white;
         margin-top: 15px;
+        margin-bottom: 15px;
     }
     .askTitle {
         height: 70px;
@@ -216,6 +236,12 @@
     .upperWrapper {
         position: relative;
         height: 100%;
+    }
+    .statusBar {
+        margin-top: -6px;
+        width: 1150px;
+        margin-right: auto;
+        margin-left: auto;
     }
     
 </style>

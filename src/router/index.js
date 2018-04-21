@@ -9,9 +9,10 @@ import Dashboard from '@/components/Dashboard'
 import CasesArchive from '@/components/CasesArchive'
 import ClientContract from '@/components/ClientContract'
 import Case from '@/components/Case'
-import Gravatar from 'vue-gravatar';
+import Gravatar from 'vue-gravatar'
+import colors from 'vuetify/es5/util/colors'
 
-import { default as Web3} from 'web3';
+import { default as Web3} from 'web3'
 
 
 
