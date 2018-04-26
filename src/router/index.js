@@ -9,8 +9,10 @@ import Dashboard from '@/components/Dashboard'
 import CasesArchive from '@/components/CasesArchive'
 import ClientContract from '@/components/ClientContract'
 import Case from '@/components/Case'
+import ActivityMonitor from '@/components/ActivityMonitor'
 import Gravatar from 'vue-gravatar'
 import colors from 'vuetify/es5/util/colors'
+import VueMoment from 'vue-moment'
 
 import { default as Web3} from 'web3'
 
@@ -20,6 +22,7 @@ import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Router)
 Vue.use(Vuetify)
+Vue.use(VueMoment)
 
 
 //Global Components
@@ -32,6 +35,7 @@ Vue.component('CasesArchive', CasesArchive);
 Vue.component('v-gravatar', Gravatar);
 Vue.component('ClientContract', ClientContract);
 Vue.component('Case', Case);
+Vue.component('ActivityMonitor', ActivityMonitor);
 
 
 export default new Router({
@@ -43,7 +47,8 @@ export default new Router({
     {path: '/welcome', component: Welcome},
     {path: '/cases-archive', component: CasesArchive},
     {path: '/client-contract', component: ClientContract},
-    {path: '/case', component: Case}
+    {path: '/case', component: Case},
+    {path: '/activity', component: ActivityMonitor}
   ]
 })
 

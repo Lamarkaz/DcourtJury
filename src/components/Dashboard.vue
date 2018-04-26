@@ -1,44 +1,47 @@
 <template>
-  <v-layout style="margin-top: 60px; margin-left: 65px">
-    <v-container style="margin-top: 40px; max-width: 1100px">
-      <h3 class="headerText"><v-icon style="margin-top: 6px; margin-right: 4px; margin-bottom: 10px">history</v-icon>Cases History</h3>
-      <v-data-table
-        hide-actions
-        :headers="headers"
-        :items="items"
-        :loading="true"
-        class="elevation-1"
-      >
-        <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
-        <template slot="items" slot-scope="props">
-          <td>{{ props.item.caseTitle }}</td>
-          <td class="text-xs-center">{{ props.item.caseId }}</td>
-          <td class="text-xs-center">{{ props.item.caseOpenedDate }}</td>
-          <td class="text-xs-center">{{ props.item.caseClosedDate }}</td>
-          <td class="text-xs-center">{{ props.item.caseVotes }}</td>
-          <td class="text-xs-center">{{ props.item.Votes }}</td>
-          <td class="text-xs-center">{{ props.item.caseStatus }}</td>
-        </template>
-      </v-data-table>
-    </v-container>
-    <div class="mainWrapper">
-      <v-gravatar :hash="gravatarHash" class="vGravatar"/>
-      <div style="margin-right: auto; margin-left: auto">
-        <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
-          <h3 class="headlineJuror">{{ $root.jurorAddress }}</h3>
-        </a>
+  <v-container style="margin-top:75px">
+    <v-layout style="margin-left: -30px">
+      <div class="mainWrapper">
+        <v-gravatar :hash="gravatarHash" class="vGravatar"/>
+        <div style="margin-right: auto; margin-left: auto">
+          <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
+            <h3 class="headlineJuror">{{ $root.jurorAddress }}</h3>
+          </a>
+        </div>
+        <div id="activityGraph" class="activityGraph">
+          <ActivityMonitor></ActivityMonitor>
+        </div>
+        <div class="statusCont"></div>
+        <v-data-table
+          :headers="headers"
+          :items="items"
+          :loading="true"
+          class="elevation-1"
+        >
+          <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
+          <template slot="items" slot-scope="props">
+            <td>{{ props.item.caseTitle }}</td>
+            <td class="text-xs-center">{{ props.item.caseId }}</td>
+            <td class="text-xs-center">{{ props.item.caseOpenedDate }}</td>
+            <td class="text-xs-center">{{ props.item.caseClosedDate }}</td>
+            <td class="text-xs-center">{{ props.item.caseVotes }}</td>
+            <td class="text-xs-center">{{ props.item.Votes }}</td>
+            <td class="text-xs-center">{{ props.item.caseStatus }}</td>
+          </template>
+        </v-data-table>
       </div>
-    </div>
-  </v-layout>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
+import ActivityMonitor from '@/components/ActivityMonitor'
 export default {
+  components: { ActivityMonitor },
    data () {
       return {
         ClientAddress: '',
         ClientScan: '',
-        gravatarHash: '',
         headers: [
           {
             text: 'Case Title',
@@ -104,8 +107,10 @@ export default {
     margin-bottom: 15px;
   }
   .headlineJuror {
-    font-size: 13px !important;
+    font-size: 15px !important;
     font-weight: 500;
+    margin-top: 15px;
+    color: white;
     margin-right: auto; 
     margin-left: auto;
   }
@@ -117,12 +122,16 @@ export default {
     box-shadow: none !important;
   }
   .mainWrapper {
-		margin-top: 60px;
-		width: 450px;
-		height: 450px;
+		margin-top: 30px;
+		min-width: 1200px;
+		height: auto;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 80px;
 		background-color: #222;
-		margin-right: 20px;
-    margin-left: 20px;
+		margin-right: auto;
+    margin-left: auto;
 		border-radius: 4px;
 		border-top: 4px solid #5E35B1;
 	}
@@ -136,4 +145,30 @@ export default {
 		margin-top: 2px;
 		font-size: 14px;
 	}
+  .elevation-1 {
+    color: white; 
+    max-width: 80%; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: rgba(255,255,255,0.04);
+  }
+  .statusCont {
+    width: 80%;
+    height: auto;
+    background-color: rgba(255,255,255,0.02);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  .activityGraph {
+    margin-top: 20px;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    width: auto;
+    padding: 18px;
+    max-width: 920px;
+    }
 </style>
