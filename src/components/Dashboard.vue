@@ -8,10 +8,25 @@
             <h3 class="headlineJuror">{{ $root.jurorAddress }}</h3>
           </a>
         </div>
-        <div id="activityGraph" class="activityGraph">
+        <!-- <div id="activityGraph" class="activityGraph">
           <ActivityMonitor></ActivityMonitor>
+        </div> -->
+        <div class="statusCont">
+          <div class="text-xs-center">
+            <v-chip label color="grey darken-2" text-color="white" disabled>
+              <v-icon left style="margin-right: 6px; margin-left: 0px; font-size: 18px">gavel</v-icon>132 Cases
+            </v-chip>
+
+            <v-chip label color="purple darken-2" text-color="white" disabled>
+              <v-icon left style="margin-right: 3px">money_off</v-icon>Voting Power: 133 DCT
+            </v-chip>
+
+            <v-chip label color="green darken-2" class="actionChip" text-color="white"><v-icon left style="margin-right: 2px">attach_money</v-icon>Balance: 133 DCT
+              <v-btn class="chipBtn" color="green darken-4">Claim</v-btn>
+            </v-chip>
+          </div>
         </div>
-        <div class="statusCont"></div>
+        <h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px; font-weight: 100; color: white; font-size: 19px">history</v-icon>Cases History</h3>
         <v-data-table
           :headers="headers"
           :items="items"
@@ -101,10 +116,9 @@ export default {
 
 <style scoped>
   .headerText {
-    color: #4527a0;
-    font-size: 21px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    color: white;
+    font-size: 17px;
+    margin-top: 40px;
   }
   .headlineJuror {
     font-size: 15px !important;
@@ -150,13 +164,12 @@ export default {
     max-width: 80%; 
     margin-left: auto; 
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 14px;
     background-color: rgba(255,255,255,0.04);
   }
   .statusCont {
     width: 80%;
     height: auto;
-    background-color: rgba(255,255,255,0.02);
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -170,5 +183,15 @@ export default {
     width: auto;
     padding: 18px;
     max-width: 920px;
+    }
+    .chipBtn {
+      margin-right: -12px;
+      cursor: pointer;
+      box-shadow: none;
+      border-radius: 0px;
+      height: 32px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: none;
     }
 </style>
