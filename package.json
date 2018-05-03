@@ -10,11 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "chart.js": "^2.7.2",
     "vue": "^2.5.2",
+    "vue-chartjs": "^3.3.1",
     "vue-gravatar": "^1.2.1",
     "vue-moment": "^3.2.0",
     "vue-router": "^3.0.1",
     "vuetify": "^1.0.11",
+    "vuetrend": "^0.3.2",
     "web3": "^1.0.0-beta.33"
   },
   "devDependencies": {

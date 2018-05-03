@@ -8,23 +8,33 @@
             <h3 class="headlineJuror">{{ $root.jurorAddress }}</h3>
           </a>
         </div>
-        <!-- <div id="activityGraph" class="activityGraph">
-          <ActivityMonitor></ActivityMonitor>
-        </div> -->
+        <div class="text-xs-center" style="margin-top: 8px; margin-bottom: 5px">
+          <v-chip label color="grey darken-2" text-color="white" disabled>
+            <v-icon left style="margin-right: 6px; margin-left: 0px; font-size: 19px">gavel</v-icon>132 Cases
+          </v-chip>
+
+          <v-chip label color="purple darken-2" text-color="white" disabled>
+            <v-icon left style="margin-right: 3px; font-size: 21px">money_off</v-icon>Voting Power: 133 DCT
+          </v-chip>
+
+          <v-chip label color="green darken-2" class="actionChip" text-color="white">
+            <v-icon left style="margin-right: 2px; font-size: 21px">attach_money</v-icon>Balance: 133 DCT
+            <v-btn class="chipBtn" color="green darken-4">Claim</v-btn>
+          </v-chip>
+        </div>
+        <div id="activityGraph" class="activityGraph">
+            <trend
+              :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
+              :gradient="['#5627e5', '#5631c6', '#4527a0']"
+              auto-draw
+              smooth
+              width=600
+              height=100
+              style="stroke-width: 2.2px">
+            </trend>
+        </div>
         <div class="statusCont">
-          <div class="text-xs-center">
-            <v-chip label color="grey darken-2" text-color="white" disabled>
-              <v-icon left style="margin-right: 6px; margin-left: 0px; font-size: 18px">gavel</v-icon>132 Cases
-            </v-chip>
-
-            <v-chip label color="purple darken-2" text-color="white" disabled>
-              <v-icon left style="margin-right: 3px">money_off</v-icon>Voting Power: 133 DCT
-            </v-chip>
-
-            <v-chip label color="green darken-2" class="actionChip" text-color="white"><v-icon left style="margin-right: 2px">attach_money</v-icon>Balance: 133 DCT
-              <v-btn class="chipBtn" color="green darken-4">Claim</v-btn>
-            </v-chip>
-          </div>
+          <line-chart></line-chart>
         </div>
         <h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px; font-weight: 100; color: white; font-size: 19px">history</v-icon>Cases History</h3>
         <v-data-table
@@ -178,20 +188,18 @@ export default {
     margin-top: 20px;
     margin-left: auto; 
     margin-right: auto;
-    border: 1px solid rgba(0,0,0,0.3);
-    border-radius: 3px;
     width: auto;
-    padding: 18px;
+    padding: 0px;
     max-width: 920px;
     }
-    .chipBtn {
-      margin-right: -12px;
-      cursor: pointer;
-      box-shadow: none;
-      border-radius: 0px;
-      height: 32px;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: none;
-    }
+  .chipBtn {
+    margin-right: -12px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: none;
+  }
 </style>
