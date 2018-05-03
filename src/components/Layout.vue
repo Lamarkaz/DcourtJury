@@ -34,7 +34,7 @@
         right
         hide-overlay
         width= 600
-        style="margin-top: 65px; background-color: #333; padding-right: 5px; padding-left: 5px"
+        style="margin-top: 65px; background-color: #333; padding-right: 5px; padding-left: 5px; z-index: 1000"
       >
         <v-list class="pa-1">
           <v-list-tile>
@@ -191,5 +191,17 @@ export default {
     margin-left: auto;
     background: rgba(255,255,255,0.1);
     border-radius: 3px;
+  }
+  .application .theme--light.stepper .stepper__label, .theme--light .stepper .stepper__label {
+    color: white;
+  }
+  .application .theme--light.stepper .stepper__step--complete .stepper__label, .theme--light .stepper .stepper__step--complete .stepper__label {
+    color: white;
+  }
+  .application .theme--light.stepper .stepper__header .divider, .theme--light .stepper .stepper__header .divider {
+    background: white;
+  }
+  .application--wrap {
+    min-height: 0px;
   }
 </style>

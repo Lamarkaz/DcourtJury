@@ -3,17 +3,19 @@
       <v-layout style="margin-top: 57px">
         <div class="statusBar">
             <div class="upperWrapper" style="z-index: 10">
-                <v-stepper value="2">
+                <v-app>
+                <v-stepper value="2" class="phaseStat">
                     <v-stepper-header>
-                      <v-stepper-step step="1" complete>Select campaign settings</v-stepper-step>
+                      <v-stepper-step step="1" complete>Trial Period</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="2">Create an ad group</v-stepper-step>
+                      <v-stepper-step step="2" complete>Voting phase</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="3">Create an ad</v-stepper-step>
+                      <v-stepper-step step="3">Unlocking phase</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="3">Create an ad</v-stepper-step>
+                      <v-stepper-step step="3">Verdict</v-stepper-step>
                     </v-stepper-header>
                   </v-stepper>
+                </v-app>
             </div>
         </div>  
      </v-layout>
@@ -22,11 +24,11 @@
             <div class="upperWrapper">
                 <v-breadcrumbs style="color: white; margin-left: 20px; margin-top: -56px">
                     <v-icon slot="divider">chevron_right</v-icon>
-                    <v-breadcrumbs-item
+                    <v-breadcrumbs-item style="color: white"
                     >
                         Decentube
                     </v-breadcrumbs-item>
-                    <v-breadcrumbs-item
+                    <v-breadcrumbs-item style="color: white"
                         disabled=disabled
                     >
                         [Claim of Ownership] I've the copyrights for this video!
@@ -242,6 +244,13 @@
         width: 1150px;
         margin-right: auto;
         margin-left: auto;
+    }
+    .phaseStat {
+        margin-top: -2px;
+        height: 70px;
+        box-shadow: none;
+        background-color: #222; 
+        color: #5E35B1;
     }
     
 </style>

@@ -23,15 +23,8 @@
           </v-chip>
         </div>
         <div id="activityGraph" class="activityGraph">
-            <trend
-              :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
-              :gradient="['#5627e5', '#5631c6', '#4527a0']"
-              auto-draw
-              smooth
-              width=600
-              height=100
-              style="stroke-width: 2.2px">
-            </trend>
+          <!-- Last Month Activity -->
+        <ActivityMonitor></ActivityMonitor>
         </div>
         <div class="statusCont">
           <line-chart></line-chart>
