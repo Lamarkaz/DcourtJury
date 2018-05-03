@@ -4,15 +4,15 @@
         <div class="statusBar">
             <div class="upperWrapper" style="z-index: 10">
                 <v-app>
-                <v-stepper value="2" class="phaseStat">
+                <v-stepper value="4" class="phaseStat">
                     <v-stepper-header>
                       <v-stepper-step step="1" complete>Trial Period</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="2">Voting phase</v-stepper-step>
+                      <v-stepper-step step="2" complete>Voting phase</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="3">Unlocking phase</v-stepper-step>
+                      <v-stepper-step step="3" complete>Unlocking phase</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="4">Verdict</v-stepper-step>
+                      <v-stepper-step step="4" complete>Verdict</v-stepper-step>
                     </v-stepper-header>
                   </v-stepper>
                 </v-app>
@@ -24,17 +24,17 @@
             <div class="upperWrapper">
                 <v-breadcrumbs style="color: white; margin-left: 20px; margin-top: -56px">
                     <v-icon slot="divider">chevron_right</v-icon>
-                    <v-breadcrumbs-item 
+                    <v-breadcrumbs-item text-color="white"
                     >
                         Decentube
                     </v-breadcrumbs-item>
-                    <v-breadcrumbs-item
+                    <v-breadcrumbs-item text-color="white"
                         disabled=disabled
                     >
                         [Claim of Ownership] I've the copyrights for this video!
                     </v-breadcrumbs-item>
                 </v-breadcrumbs>
-                <div style="margin-top: -48px; margin-left: 67%;  margin-bottom: 20px">
+                <div style="margin-top: -48px; margin-left: 64%;  margin-bottom: 20px">
                     <v-chip color="grey darken-4" text-color="white">
                         <v-icon style="font-size: 16px; margin-right: 6px">account_balance</v-icon>
                         Case ID 14
@@ -43,9 +43,9 @@
                         <v-icon style="font-size: 16px; margin-right: 6px">gavel</v-icon>
                         183 Votes
                     </v-chip>
-                    <v-chip color="grey darken-4" text-color="white">
-                        <v-icon style="font-size: 16px; margin-right: 6px">timer</v-icon>
-                        4 Days
+                    <v-chip color="grey darken-4" text-color="green">
+                        <v-icon style="font-size: 16px; margin-right: 6px">account_balance</v-icon>
+                        NOT GUILTY
                     </v-chip>
                 </div>
 
@@ -53,7 +53,7 @@
                     <div class="oppWrapper" style="border-right: 1px solid grey">
                         <v-gravatar :hash="gravatarHashAcc" class="vGravatar"/>
                         <div style="margin-right: auto; margin-left: auto">
-                            <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
+                            <v-chip label text-color="white" style="margin-top:15px" color="red">
                                 Accuser
                             </v-chip>
                             <a target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
@@ -68,7 +68,7 @@
                     <div class="oppWrapper">
                         <v-gravatar :hash="gravatarHashDef" class="vGravatar"/>
                         <div style="margin-right: auto; margin-left: auto">
-                            <v-chip label text-color="white" style="margin-top:15px; background-color: #5E35B1">
+                            <v-chip label text-color="white" style="margin-top:15px" color="green">
                                 Defender
                             </v-chip>
                             <a target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
@@ -80,16 +80,6 @@
                         <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
                     </div>
                 </div>
-            </div>
-            <div class="askWrapper">
-                <v-icon class="askTitle">gavel</v-icon>
-                <v-card style="box-shadow: none">
-                    <v-card-text>
-                    <p class="text-xs-center askBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius.</p>
-                    </v-card-text>
-                </v-card>
-                <v-btn class="actionBtn" color="green" style="left: 0px">Not Guilty</v-btn>
-                <v-btn class="actionBtn" color="red" style="right: 0px">Guilty</v-btn>
             </div>
         </div>
       </v-layout>
@@ -140,7 +130,7 @@
   }
   .mainWrapper {
         margin-top: 15px;
-        padding-bottom: 350px;
+        padding-bottom: 50px;
         margin-bottom: 30px;
         width: 1150px;
         height: auto;
@@ -252,4 +242,5 @@
         background-color: #222; 
         color: #5E35B1;
     }
+    
 </style>

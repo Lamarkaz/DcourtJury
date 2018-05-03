@@ -4,11 +4,11 @@
         <div class="statusBar">
             <div class="upperWrapper" style="z-index: 10">
                 <v-app>
-                <v-stepper value="2" class="phaseStat">
+                <v-stepper value="3" class="phaseStat">
                     <v-stepper-header>
                       <v-stepper-step step="1" complete>Trial Period</v-stepper-step>
                       <v-divider></v-divider>
-                      <v-stepper-step step="2">Voting phase</v-stepper-step>
+                      <v-stepper-step step="2" complete>Voting phase</v-stepper-step>
                       <v-divider></v-divider>
                       <v-stepper-step step="3">Unlocking phase</v-stepper-step>
                       <v-divider></v-divider>
@@ -24,11 +24,11 @@
             <div class="upperWrapper">
                 <v-breadcrumbs style="color: white; margin-left: 20px; margin-top: -56px">
                     <v-icon slot="divider">chevron_right</v-icon>
-                    <v-breadcrumbs-item 
+                    <v-breadcrumbs-item style="color: white"
                     >
                         Decentube
                     </v-breadcrumbs-item>
-                    <v-breadcrumbs-item
+                    <v-breadcrumbs-item style="color: white"
                         disabled=disabled
                     >
                         [Claim of Ownership] I've the copyrights for this video!
@@ -45,7 +45,7 @@
                     </v-chip>
                     <v-chip color="grey darken-4" text-color="white">
                         <v-icon style="font-size: 16px; margin-right: 6px">timer</v-icon>
-                        4 Days
+                        2 Days
                     </v-chip>
                 </div>
 
@@ -60,10 +60,6 @@
                             <h3 class="headlineJuror">0xFb386606BAd35e2432d3E0315cfbf79eCA60b018</h3>
                             </a>
                         </div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
                     </div>
                     <div class="oppWrapper">
                         <v-gravatar :hash="gravatarHashDef" class="vGravatar"/>
@@ -75,21 +71,8 @@
                             <h3 class="headlineJuror">0x6CaCE0528324A8afC2b157CebA3cDd2a27c4E21f</h3>
                             </a>
                         </div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
-                        <div class="StateBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius. Curabitur pharetra erat at ex ornare, eget convallis sapien eleifend. Aenean a sem velit. Donec posuere vitae turpis vel gravida. Sed convallis tellus libero, nec ultrices diam egestas ut. Pellentesque mi felis, ultrices vel mauris eget, vulputate pulvinar est. Donec et tempus lorem, id volutpat orci. Donec interdum, lectus quis placerat feugiat, mi lectus euismod sem, ut tincidunt felis arcu vel turpis. Aliquam erat volutpat. Integer at convallis massa. Fusce sit amet enim convallis, scelerisque dolor in, pretium neque.</div>
                     </div>
                 </div>
-            </div>
-            <div class="askWrapper">
-                <v-icon class="askTitle">gavel</v-icon>
-                <v-card style="box-shadow: none">
-                    <v-card-text>
-                    <p class="text-xs-center askBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis feugiat varius.</p>
-                    </v-card-text>
-                </v-card>
-                <v-btn class="actionBtn" color="green" style="left: 0px">Not Guilty</v-btn>
-                <v-btn class="actionBtn" color="red" style="right: 0px">Guilty</v-btn>
             </div>
         </div>
       </v-layout>
@@ -140,7 +123,7 @@
   }
   .mainWrapper {
         margin-top: 15px;
-        padding-bottom: 350px;
+        padding-bottom: 50px;
         margin-bottom: 30px;
         width: 1150px;
         height: auto;
@@ -194,7 +177,13 @@
         width: 90%;
         margin-right: auto;
         margin-left: auto;
-        height: 500px;
+        height: 400px;
+        padding-top: 100px;
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
     }
     .oppWrapper {
         width: 50%;
@@ -252,4 +241,5 @@
         background-color: #222; 
         color: #5E35B1;
     }
+    
 </style>

@@ -8,6 +8,9 @@ import Clients from '@/components/Clients'
 import Dashboard from '@/components/Dashboard'
 import CasesArchive from '@/components/CasesArchive'
 import ClientContract from '@/components/ClientContract'
+import CaseTrial from '@/components/CaseTrial'
+import CaseUnlock from '@/components/CaseUnlock'
+import CaseVerdict from '@/components/CaseVerdict'
 import Case from '@/components/Case'
 import Gravatar from 'vue-gravatar'
 import colors from 'vuetify/es5/util/colors'
@@ -39,6 +42,9 @@ Vue.component('CasesArchive', CasesArchive);
 Vue.component('v-gravatar', Gravatar);
 Vue.component('ClientContract', ClientContract);
 Vue.component('Case', Case);
+Vue.component('CaseTrial', CaseTrial);
+Vue.component('CaseUnlock', CaseUnlock);
+Vue.component('CaseVerdict', CaseVerdict);
 Vue.component('ActivityMonitor', ActivityMonitor);
 
 
@@ -51,7 +57,10 @@ export default new Router({
     {path: '/welcome', component: Welcome},
     {path: '/cases-archive', component: CasesArchive},
     {path: '/client-contract', component: ClientContract},
-    {path: '/case', component: Case}
+    {path: '/case', component: Case},
+    {path: '/caseTrial', component: CaseTrial},
+    {path: '/caseUnlock', component: CaseUnlock},
+    {path: '/caseVerdict', component: CaseVerdict}
   ]
 })
 
