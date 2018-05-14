@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar fixed dark flat color="deep-purple darken-3" height="65" style="z-index: 1000">
+    <v-toolbar fixed dark flat color="deep-purple darken-3" height="65" style="z-index: 10000">
       <v-toolbar-title class="white--text" v-on:click="$router.push('/')">
         <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"/>
       </v-toolbar-title>
@@ -34,7 +34,7 @@
         right
         hide-overlay
         width= 600
-        style="margin-top: 65px; background-color: #333; padding-right: 5px; padding-left: 5px; z-index: 1000"
+        style="margin-top: 65px; background-color: #333; padding-right: 5px; padding-left: 5px; z-index: 1000; position: fixed"
       >
         <v-list class="pa-1">
           <v-list-tile>
@@ -92,9 +92,6 @@
           </v-list-tile>
         </v-list>
       </v-toolbar>
-      <v-divider></v-divider>
-      <div class="sideBarItem">
-      </div>
     </v-navigation-drawer>
     </div>
   </div>
@@ -203,5 +200,15 @@ export default {
   }
   .application--wrap {
     min-height: 0px;
+  }
+  .navigation-drawer>.list:not(.list--dense) .list__tile {
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .navigation-drawer>.list:not(.list--dense) .list__tile:hover {
+    background-color: rgba(255,255,255,0.05)
   }
 </style>
