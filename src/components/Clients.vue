@@ -11,7 +11,7 @@
 		  >
 		    <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
 		    <template slot="items" slot-scope="props">
-		      <td>{{ props.item.contractName }}</td>
+		      <td class="text-xs-left">{{ props.item.contractName }}</td>
 		      <td class="text-xs-center">{{ props.item.contractAddress }}</td>
 		      <td class="text-xs-center">{{ props.item.contractTotalCases }}</td>
 		      <td class="text-xs-center">{{ props.item.contractOpenCases }}</td>

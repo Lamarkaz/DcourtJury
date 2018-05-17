@@ -5,13 +5,19 @@
         <img src="../assets/Logo.svg" width="100px" style="margin-left: 15px; cursor: pointer; margin-top: 7px"/>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-text-field 
-      append-icon="account_balance" 
-      color="white" 
-      hide-details 
-      single-line 
-      placeholder="Case ID"
-      class="searchBar input-group--focused"></v-text-field>
+      <v-form ref="form" v-model="valid" lazy-validation>
+        <v-text-field 
+        append-icon="account_balance" 
+        color="white" 
+        hide-details 
+        single-line 
+        placeholder="Case ID"
+        class="searchBar input-group--focused searchCase"
+        v-model="casID"
+        :rules="caseIDRules"
+        @keyup.enter="submit"
+      ></v-text-field>
+      </v-form>
       <v-btn icon v-on:click="$router.push('/latest')">
         <v-icon>whatshot</v-icon>
       </v-btn>
@@ -104,6 +110,7 @@ export default {
       return {
         siderBarDrawer: true,
         notifDrawer: false,
+        valid: true,
         items: [
           { title: 'New Evidence', case: 'Duber ride case #13', icon: 'track_changes' },
           { title: 'New Verdict', case: 'Decentube video copyrights violation case #85', icon: 'gavel' },
@@ -112,6 +119,9 @@ export default {
           { title: 'New Vote', case: 'Dirbnb problem case #159', icon: 'trending_up' }
           ],
         mini: true,
+        caseIDRules: [
+        v => /^(\s*|\d+)$/.test(v)
+      ],
       }
     },
     computed: {
@@ -210,5 +220,8 @@ export default {
   }
   .navigation-drawer>.list:not(.list--dense) .list__tile:hover {
     background-color: rgba(255,255,255,0.05)
+  }
+  .searchCase.input-group--error {
+    color: #F44336;
   }
 </style>

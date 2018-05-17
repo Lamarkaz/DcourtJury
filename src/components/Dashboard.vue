@@ -12,11 +12,9 @@
           <v-chip label color="grey darken-2" text-color="white" disabled>
             <v-icon left style="margin-right: 6px; margin-left: 0px; font-size: 19px">gavel</v-icon>132 Cases
           </v-chip>
-
           <v-chip label color="purple darken-2" text-color="white" disabled>
             <v-icon left style="margin-right: 3px; font-size: 21px">money_off</v-icon>Voting Power: 133 DCT
           </v-chip>
-
           <v-chip label color="green darken-2" class="actionChip" text-color="white">
             <v-icon left style="margin-right: 2px; font-size: 21px">attach_money</v-icon>Balance: 133 DCT
             <v-btn class="chipBtn" color="green darken-4">Claim</v-btn>
@@ -25,9 +23,6 @@
         <div id="activityGraph" class="activityGraph">
           <!-- Last Month Activity -->
         <ActivityMonitor></ActivityMonitor>
-        </div>
-        <div class="statusCont">
-          <line-chart></line-chart>
         </div>
         <h3 class="headerText"><v-icon style="margin-top: -4px; margin-right: 4px; font-weight: 100; color: white; font-size: 19px">history</v-icon>Cases History</h3>
         <v-data-table
@@ -38,8 +33,9 @@
         >
           <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
           <template slot="items" slot-scope="props">
-            <td>{{ props.item.caseTitle }}</td>
+            <td class="text-xs-left">{{ props.item.caseTitle }}</td>
             <td class="text-xs-center">{{ props.item.caseId }}</td>
+            <td class="text-xs-center">{{ props.item.cliContract }}</td>
             <td class="text-xs-center">{{ props.item.caseOpenedDate }}</td>
             <td class="text-xs-center">{{ props.item.caseClosedDate }}</td>
             <td class="text-xs-center">{{ props.item.caseVotes }}</td>
@@ -68,6 +64,7 @@ export default {
             value: 'caseTitle'
           },
           { text: 'Case ID', value: 'caseId', align: 'center', sortable: false },
+          { text: 'Client Contract', value: 'cliContract', align: 'center', sortable: false },
           { text: 'Date Opened', value: 'caseOpenedDate', align: 'center', sortable: false },
           { text: 'Date Closed', value: 'caseClosedDate', align: 'center', sortable: false },
           { text: 'Votes', value: 'caseVotes', align: 'center', sortable: false },
@@ -78,6 +75,7 @@ export default {
           {
             caseTitle: 'Duber ride',
             caseId: 13,
+            cliContract: 'Duber',
             caseOpenedDate: '17 Apr, 2017',
             caseClosedDate: '21 Dec, 2017',
             caseStatus: 'Closed',
@@ -87,6 +85,7 @@ export default {
           {
             caseTitle: 'Decentube video copyrights violation',
             caseId: 85,
+            cliContract: 'Decentube',
             caseOpenedDate: '20 Apr, 2017',
             caseClosedDate: '-',
             caseStatus: 'Open',
@@ -96,6 +95,7 @@ export default {
           {
             caseTitle: 'Dirbnb problem',
             caseId: 129,
+            cliContract: 'Dirbnb',
             caseOpenedDate: '17 Apr, 2017',
             caseClosedDate: '-',
             caseStatus: 'Open',

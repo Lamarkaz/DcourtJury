@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <Metamask v-if="!Metamask"></Metamask>
-    <!-- <Welcome v-if="!Registered && Metamask"></Welcome> -->
-    <div>
-      <Layout></Layout>
-      <v-content style="margin-left: 65px">
-        <transition name="fade">
-          <router-view></router-view>
-        </transition>
-      </v-content>
-    </div>
+      <Metamask v-if="!Metamask"></Metamask>
+      <!-- <Welcome v-if="!Registered && Metamask"></Welcome> -->
+      <div>
+        <Layout></Layout>
+        <v-content style="margin-left: 65px">
+          <transition name="fade">
+            <router-view></router-view>
+          </transition>
+        </v-content>
+      </div>
   </div>
 </template>
 

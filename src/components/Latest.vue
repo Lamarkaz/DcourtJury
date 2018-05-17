@@ -11,7 +11,7 @@
 		  >
 		    <v-progress-linear slot="progress" color="deep-purple darken-3" indeterminate></v-progress-linear>
 		    <template slot="items" slot-scope="props">
-		      <td>{{ props.item.caseTitle }}</td>
+		      <td class="text-xs-left">{{ props.item.caseTitle }}</td>
 		      <td class="text-xs-center">{{ props.item.caseId }}</td>
 		      <td class="text-xs-center">{{ props.item.clientContract }}</td>
 		      <td class="text-xs-center">{{ props.item.caseVotes }}</td>
