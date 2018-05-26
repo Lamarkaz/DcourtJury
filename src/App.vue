@@ -2,7 +2,7 @@
   <div id="app">
       <Metamask v-if="!Metamask"></Metamask>
       <!-- <Welcome v-if="!Registered && Metamask"></Welcome> -->
-      <div>
+      <div data-app>
         <Layout></Layout>
         <v-content style="margin-left: 65px">
           <transition name="fade">

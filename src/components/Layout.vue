@@ -18,9 +18,12 @@
         @keyup.enter="submit"
       ></v-text-field>
       </v-form>
-      <v-btn icon v-on:click="$router.push('/latest')">
-        <v-icon>whatshot</v-icon>
-      </v-btn>
+      <v-tooltip bottom color="black">
+        <v-btn icon v-on:click="$router.push('/latest')" slot="activator">
+          <v-icon>whatshot</v-icon>
+        </v-btn>
+        <span>Latest Cases</span>
+      </v-tooltip>
       <v-btn icon @click.stop="notifDrawer = !notifDrawer">
        <v-badge overlap>
         <span slot="badge" class="badge-not"></span>
@@ -98,6 +101,11 @@
           </v-list-tile>
         </v-list>
       </v-toolbar>
+      <footer>
+        <a href="https://lamarkaz.com" target="_blank" v-tooltip.top-center="msg">
+          <img src="../assets/lamarkazlogo.svg" class="Lamarkaz"/>
+        </a>
+      </footer>
     </v-navigation-drawer>
     </div>
   </div>
@@ -224,4 +232,30 @@ export default {
   .searchCase.input-group--error {
     color: #F44336;
   }
+  footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 80px;
+    padding-left: 20px;
+    width: 90%;
+  }
+  .Lamarkaz {
+    opacity: 0.7;
+    width: 25px;
+    float: left;
+    cursor: pointer;
+    -webkit-transition: margin-left 0.5s ease-in-out;
+    -moz-transition: margin-left 0.5s ease-in-out;
+    -o-transition: margin-left 0.5s ease-in-out;
+    transition: margin-left 0.5s ease-in-out;
+  }
+
+  .Lamarkaz:hover {
+    opacity: 1;
+  }
+
+  .sideBar:hover .Lamarkaz {
+    margin-left: 90px;
+  }
+
 </style>

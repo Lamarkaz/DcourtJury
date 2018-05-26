@@ -5,7 +5,10 @@
         <v-gravatar :hash="gravatarHash" class="vGravatar"/>
         <div style="margin-right: auto; margin-left: auto">
           <a :href="jurorScan" target="_blank" style="text-decoration: none; color: rgba(0,0,0,0.8)">
-            <h3 class="headlineJuror">{{ $root.jurorAddress }}</h3>
+            <v-tooltip bottom color="black">
+              <h3 class="headlineJuror" slot="activator">{{ $root.jurorAddress }}</h3>
+              <span>Open in Etherscan</span>
+            </v-tooltip>
           </a>
         </div>
         <div class="text-xs-center" style="margin-top: 8px; margin-bottom: 5px">
